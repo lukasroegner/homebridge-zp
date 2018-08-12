@@ -79,6 +79,7 @@ Key | Default | Description
 `port` | `0` _(random)_ | The port for the web server homebridge-zp creates to receive notifications from Sonos ZonePlayers.
 `searchTimeout` | `2` | The timeout (in seconds) to wait for a response when searching for Sonos Zoneplayers.
 `subscriptionTimeout` | `30` | The duration (in minutes) of the subscriptions homebridge-zp creates with each ZonePlayer.
+`volume` | {} | Can be used to set the volume of speakers at a specific time of day. Use the zone name (as shown in the Sonos app): { "Living Room": { "10:00:00": 20, "20:00:00": 10 } } means that the volume in the living room will be set to 20% at 10:00:00 and to 10% at 20:00:00.
 
 Below is an example config.json that exposes the *Sonos* and *Speakers* service as a HomeKit `Speaker` and volume as `Brightness`, so it can be controlled from Siri:
 ```json
